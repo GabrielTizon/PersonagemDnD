@@ -1,0 +1,23 @@
+// Arquivo build.gradle da raiz do projeto
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"  // Plugin Gradle do Android
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"  // Plugin Kotlin, se você estiver usando Kotlin
+        // Aqui você pode adicionar mais dependências para build
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
